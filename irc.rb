@@ -2,7 +2,6 @@
 require 'rubygems'
 require 'cinch'
 require 'socket'
-require 'rubygems'
 require 'slop'
 
 opts = Slop.parse do
