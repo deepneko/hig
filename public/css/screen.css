@@ -1,8 +1,0 @@
-/*  This code is copyrighted to Jason Santa Maria.
-    This means you may NOT use it for your site's design.  */
-
-/* import stylesheets and hide from ie/mac \*/
-@import url('reset.css');
-@import url('master.css');
-@import url('ie.css');
-/* end import/hide */
