@@ -25,6 +25,7 @@ bot = Cinch::Bot.new do
     c.realname = opts[:nickname]
     c.user = opts[:nickname]
     c.channels = [opts[:channel]]
+    c.reconnect = true
   end
   
   on :message do |m|
@@ -32,6 +33,11 @@ bot = Cinch::Bot.new do
       buf = "(#{m.user}) #{m.message}"
       client.puts(buf)
     end
+  end
+
+  on :kick do |m|
+    bot.quit if m.user == opts[:nickname]
+    bot.irc.start
   end
 end
 
